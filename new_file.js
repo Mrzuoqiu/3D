@@ -13,9 +13,9 @@
                 var disX = ev1.pageX - x;
                 var disY = ev1.pageY - y;
                 $(document).mousemove(function(ev) {
-                    var y = ev.pageX - disY;
-                    var x = ev.pageY + disX;
-                    that.css('transform', 'perspective(800px) rotateX(' + x + 'deg) rotateY(' + y + 'deg)');
+                    var xMove = ev.pageY - disY;
+                    var yMove = disX + ev.pageX;
+                    that.css('transform', 'perspective(800px) rotateX(' + xMove + 'deg) rotateY(' + yMove + 'deg)');
 
                 })
                 $(document).mouseup(function() {
